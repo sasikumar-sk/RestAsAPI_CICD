@@ -3,31 +3,9 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="gorest.GraphQLTests">
-        <methods>
-          <include name="testDeleteUser"/>
-          <include name="testCreateUserDynamic"/>
-          <include name="testUpdateUserDataProvider"/>
-          <include name="testQueryUsersStatic"/>
-          <include name="testGetUserAfterDelete"/>
-          <include name="setup"/>
-          <include name="testUpdateUserAfterUpdate"/>
-          <include name="testQueryUserByIdWithVariables"/>
-        </methods>
-      </class> <!-- gorest.GraphQLTests -->
-      <class name="reqres.CRUD">
-        <methods>
-          <include name="testUpdateUser"/>
-          <include name="testGetDeletedUser"/>
-          <include name="testDeleteUser"/>
-          <include name="testCreateUserWithApiKey"/>
-          <include name="testCreateUser"/>
-          <include name="testPatchUser"/>
-        </methods>
-      </class> <!-- reqres.CRUD -->
       <class name="reqres.GetTest">
         <methods>
-          <include name="testGetUsers"/>
+          <include name="testMissingApiKey"/>
         </methods>
       </class> <!-- reqres.GetTest -->
     </classes>
