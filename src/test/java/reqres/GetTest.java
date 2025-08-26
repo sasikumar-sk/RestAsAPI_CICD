@@ -1,4 +1,4 @@
-package basic;
+package reqres;
 
 
 import static io.restassured.RestAssured.*;

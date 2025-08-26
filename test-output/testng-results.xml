@@ -1,17 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-25T15:54:06 IST" name="Default suite" finished-at="2025-08-25T15:54:11 IST" duration-ms="4382">
+  <suite started-at="2025-08-26T08:56:44 IST" name="Default suite" finished-at="2025-08-26T08:56:55 IST" duration-ms="11423">
     <groups>
     </groups>
-    <test started-at="2025-08-25T15:54:06 IST" name="Default test" finished-at="2025-08-25T15:54:11 IST" duration-ms="4382">
-      <class name="basic.GetTest">
-        <test-method signature="testGetUsers()[pri:0, instance:basic.GetTest@4d5d943d]" started-at="2025-08-25T15:54:06 IST" name="testGetUsers" finished-at="2025-08-25T15:54:11 IST" duration-ms="4320" status="PASS">
+    <test started-at="2025-08-26T08:56:44 IST" name="Default test" finished-at="2025-08-26T08:56:55 IST" duration-ms="11423">
+      <class name="gorest.GraphQLTests">
+        <test-method is-config="true" signature="setup()[pri:0, instance:gorest.GraphQLTests@31190526]" started-at="2025-08-26T08:56:44 IST" name="setup" finished-at="2025-08-26T08:56:45 IST" duration-ms="495" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetUsers -->
-      </class> <!-- basic.GetTest -->
+        </test-method> <!-- setup -->
+        <test-method signature="testQueryUsersStatic()[pri:1, instance:gorest.GraphQLTests@31190526]" started-at="2025-08-26T08:56:45 IST" name="testQueryUsersStatic" finished-at="2025-08-26T08:56:47 IST" duration-ms="2279" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testQueryUsersStatic -->
+        <test-method signature="testCreateUserDynamic()[pri:2, instance:gorest.GraphQLTests@31190526]" started-at="2025-08-26T08:56:47 IST" name="testCreateUserDynamic" finished-at="2025-08-26T08:56:48 IST" duration-ms="1527" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUserDynamic -->
+        <test-method signature="testQueryUserByIdWithVariables()[pri:3, instance:gorest.GraphQLTests@31190526]" started-at="2025-08-26T08:56:48 IST" name="testQueryUserByIdWithVariables" finished-at="2025-08-26T08:56:50 IST" depends-on-methods="gorest.GraphQLTests.testCreateUserDynamic" duration-ms="1191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testQueryUserByIdWithVariables -->
+        <test-method signature="testUpdateUserDataProvider(java.lang.String)[pri:4, instance:gorest.GraphQLTests@31190526]" started-at="2025-08-26T08:56:50 IST" name="testUpdateUserDataProvider" data-provider="updateUserData" finished-at="2025-08-26T08:56:51 IST" depends-on-methods="gorest.GraphQLTests.testCreateUserDynamic" duration-ms="1172" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sasi Updated - 1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateUserDataProvider -->
+        <test-method signature="testUpdateUserDataProvider(java.lang.String)[pri:4, instance:gorest.GraphQLTests@31190526]" started-at="2025-08-26T08:56:51 IST" name="testUpdateUserDataProvider" data-provider="updateUserData" finished-at="2025-08-26T08:56:52 IST" depends-on-methods="gorest.GraphQLTests.testCreateUserDynamic" duration-ms="1304" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sasi name Updated -2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateUserDataProvider -->
+        <test-method signature="testUpdateUserAfterUpdate()[pri:5, instance:gorest.GraphQLTests@31190526]" started-at="2025-08-26T08:56:52 IST" name="testUpdateUserAfterUpdate" finished-at="2025-08-26T08:56:53 IST" depends-on-methods="gorest.GraphQLTests.testUpdateUserDataProvider" duration-ms="1126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateUserAfterUpdate -->
+        <test-method signature="testDeleteUser()[pri:6, instance:gorest.GraphQLTests@31190526]" started-at="2025-08-26T08:56:53 IST" name="testDeleteUser" finished-at="2025-08-26T08:56:54 IST" depends-on-methods="gorest.GraphQLTests.testCreateUserDynamic" duration-ms="1130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteUser -->
+        <test-method signature="testGetUserAfterDelete()[pri:7, instance:gorest.GraphQLTests@31190526]" started-at="2025-08-26T08:56:54 IST" name="testGetUserAfterDelete" finished-at="2025-08-26T08:56:55 IST" depends-on-methods="gorest.GraphQLTests.testDeleteUser" duration-ms="1116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserAfterDelete -->
+      </class> <!-- gorest.GraphQLTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

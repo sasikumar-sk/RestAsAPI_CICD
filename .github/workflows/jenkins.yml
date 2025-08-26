@@ -1,0 +1,14 @@
+name: Trigger Jenkins
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Jenkins Job
+        run: |
+          curl -X POST http://localhost:8080/job/RestAsAPI_CICD_Test/build\
+          --user "username:apitoken"

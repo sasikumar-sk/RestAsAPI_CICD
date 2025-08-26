@@ -1,4 +1,4 @@
-package basic;
+package reqres;
 
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.assertEquals;
@@ -14,19 +14,19 @@ public class CRUD {
 	 @Test 
 	    public void testCreateUserWithApiKey() {
 	        String requestBody = "{\n" +
-	                "  \"name\": \"Jone Mark\",\n" +
+	                "  \"name\": \"Deep Kalai\",\n" +
 	                "  \"job\": \"QA Engineer\"\n" +
 	                "}";
 
 	        Response response = given()
 	                .baseUri("https://reqres.in")
 	                .header("Content-Type", "application/json")
-	                .header("x-api-key", "reqres-free-v1")   // ✅ required header
+	                .header("x-api-key", "reqres-free-v1")   // required header
 	                .body(requestBody)
 	        .when()
 	                .post("/api/users")
 	        .then()
-	                .statusCode(201)   // ✅ expect 201 Created
+	                .statusCode(201)   // expect 201 Created
 	                .log().all()
 	                .extract().response();
 
@@ -127,9 +127,7 @@ public class CRUD {
 	                    .statusCode(404)   // expected after delete
 	                    .log().all();
 	        }
-	  
-
-	    
+	   
 
 }
 	    
