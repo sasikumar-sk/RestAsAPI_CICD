@@ -9,17 +9,17 @@ public class GetTest {
     @Test
     public void testGetUsers() {
         given()
-            .baseUri("https://reqres.in")               // Base URI
-            .basePath("/api/users")                     // Base Path
-            .queryParam("page", 1)                      // Query parameter
-            .header("x-api-key", "reqres-free-v1")      // Custom API key header
+            .baseUri("https://reqres.in")             
+            .basePath("/api/users")                    
+            .queryParam("page", 1)                     
+            .header("x-api-key", "reqres-free-v1")      
         .when()
-            .get()                                      // GET request
+            .get()                                      
         .then()
-            .statusCode(200)                            // Validate HTTP status
+            .statusCode(200)                            
             .header("Content-Type", containsString("application/json")) // Content-Type header
-            .header("Server", notNullValue())           // Server header
-            .header("Connection", equalTo("keep-alive")) // Connection header
+            .header("Server", notNullValue())            
+            .header("Connection", equalTo("keep-alive")) 
 
             // Body validations
             .body("page", equalTo(1))

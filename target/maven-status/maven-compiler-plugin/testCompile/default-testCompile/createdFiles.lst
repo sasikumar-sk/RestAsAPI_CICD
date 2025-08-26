@@ -1,0 +1,5 @@
+reqres\CRUD.class
+reqres\GetTest.class
+gorest\GraphQLTests.class
+gorest\BaseTest.class
+gorest\RestApiTests.class
