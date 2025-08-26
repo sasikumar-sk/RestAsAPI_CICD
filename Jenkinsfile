@@ -11,14 +11,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the project...'
-                sh 'mvn clean compile -DskipTests'
+                bat 'mvn clean compile -DskipTests'
             }
         }
 
         stage('Run API Tests') {
             steps {
                 echo 'Running API tests...'
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
 
