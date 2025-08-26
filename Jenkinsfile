@@ -36,10 +36,10 @@ pipeline {
             archiveArtifacts artifacts: '**/target/**/*.log', allowEmptyArchive: true
         }
         success {
-            echo '✅ Build and Tests successful'
+            echo '✅ **Build and Tests successful**'
         }
         failure {
-            echo '❌ Build failed – check console output'
+            echo '❌ **Build failed – check console output**'
         }
     }
 }
