@@ -1,4 +1,4 @@
-# RestAsAPIart
+# <<<< RestAsAPIart >>>>
 
 This project contains REST API automation test cases using **RestAssured** and **TestNG**.
 
